@@ -44,8 +44,7 @@ jobs:
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"AlejandroConde7_CrudNetcore" /o:"alejandroconde7" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           <insert_your_build_command>
-		  
-		  dotnet build CrudNetcore-TDD\CrudNetcore-TDD.csproj --configuration Release;
+		  dotnet build CrudNetcore\CrudNetcore-TDD.csproj --configuration Release;
 
       dotnet test CrudNetcore-TDD.Test\CrudNetcore-TDD.Test.csproj --no-build --collect:"XPlat Code Coverage";
 
